@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Professional Table</title>
+<title>Table to PDF</title>
 
 <style>
 
@@ -12,7 +12,7 @@ body{
     padding:40px;
 }
 
-.table-container{
+.container{
     max-width:700px;
     margin:auto;
 }
@@ -21,8 +21,6 @@ table{
     width:100%;
     border-collapse:collapse;
     background:white;
-    border-radius:8px;
-    overflow:hidden;
     box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
@@ -32,31 +30,23 @@ thead{
 }
 
 th, td{
-    padding:12px 15px;
-    text-align:left;
+    padding:12px;
+    border:1px solid #ddd;
 }
 
-th{
-    text-transform:uppercase;
-    letter-spacing:0.5px;
-    font-size:14px;
+button{
+    margin-top:20px;
+    padding:10px 20px;
+    border:none;
+    background:#27ae60;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    border-radius:5px;
 }
 
-tbody tr{
-    border-bottom:1px solid #ddd;
-}
-
-tbody tr:nth-child(even){
-    background:#f9f9f9;
-}
-
-tbody tr:hover{
-    background:#f1f1f1;
-}
-
-.amount{
-    font-weight:bold;
-    color:#27ae60;
+button:hover{
+    background:#1e8449;
 }
 
 </style>
@@ -64,10 +54,11 @@ tbody tr:hover{
 
 <body>
 
-<div class="table-container">
+<div class="container" id="tableArea">
+
+<h2>Payment Table</h2>
 
 <table>
-
 <thead>
 <tr>
 <th>Sr No.</th>
@@ -77,30 +68,45 @@ tbody tr:hover{
 </thead>
 
 <tbody>
-
 <tr>
 <td>1</td>
 <td>Rahul</td>
-<td class="amount">₹5,000</td>
+<td>5000</td>
 </tr>
 
 <tr>
 <td>2</td>
 <td>Ali</td>
-<td class="amount">₹7,500</td>
+<td>7500</td>
 </tr>
 
 <tr>
 <td>3</td>
 <td>Aman</td>
-<td class="amount">₹3,200</td>
+<td>3200</td>
 </tr>
-
 </tbody>
 
 </table>
 
 </div>
+
+<button onclick="downloadPDF()">Download PDF</button>
+
+<!-- Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<script>
+
+function downloadPDF(){
+
+const element = document.getElementById("tableArea");
+
+html2pdf().from(element).save("table-data.pdf");
+
+}
+
+</script>
 
 </body>
 </html>
