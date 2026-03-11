@@ -2,48 +2,69 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Pay via PhonePe</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PhonePe Payment</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
-    font-family:'Poppins',sans-serif;
-    background:#0f0f0f;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
+font-family:'Poppins',sans-serif;
+background:#0f0f0f;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+padding:20px;
 }
 
-.payment-box{
-    background:#1b1b1b;
-    padding:30px;
-    border-radius:10px;
-    text-align:center;
-    color:white;
-    width:320px;
+.payment-card{
+background:#1b1b1b;
+padding:25px;
+border-radius:12px;
+text-align:center;
+color:white;
+max-width:380px;
+width:100%;
+box-shadow:0 6px 20px rgba(0,0,0,0.4);
 }
 
-.payment-box h2{
-    color:#a970ff;
-}
-
-.qr{
-    width:250px;
-    margin:20px 0;
-    border-radius:10px;
-}
-
-.name{
-    font-size:18px;
-    margin-top:10px;
+.logo{
+font-size:22px;
+font-weight:600;
+color:#a970ff;
+margin-bottom:10px;
 }
 
 .note{
-    font-size:14px;
-    color:#ccc;
+color:#ccc;
+font-size:14px;
+margin-bottom:20px;
+}
+
+.qr{
+width:100%;
+max-width:260px;
+border-radius:10px;
+}
+
+.name{
+margin-top:15px;
+font-size:18px;
+font-weight:500;
+}
+
+.footer{
+margin-top:15px;
+font-size:12px;
+color:#888;
 }
 
 </style>
@@ -51,15 +72,17 @@ body{
 
 <body>
 
-<div class="payment-box">
+<div class="payment-card">
 
-<h2>Pay Using PhonePe</h2>
+<div class="logo">PhonePe Accepted Here</div>
 
-<p class="note">Scan the QR code to send payment</p>
+<p class="note">Scan & Pay using PhonePe</p>
 
-<img src="phonepe-qr.jpg" class="qr">
+<img src="phonepe-qr.jpg" class="qr" alt="PhonePe QR">
 
 <div class="name">Mohd Asheer</div>
+
+<div class="footer">Secure UPI Payment</div>
 
 </div>
 
