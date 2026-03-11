@@ -50,6 +50,7 @@ button:hover{
 }
 
 </style>
+
 </head>
 
 <body>
@@ -59,6 +60,7 @@ button:hover{
 <h2>Payment Table</h2>
 
 <table>
+
 <thead>
 <tr>
 <th>Sr No.</th>
@@ -68,6 +70,7 @@ button:hover{
 </thead>
 
 <tbody>
+
 <tr>
 <td>1</td>
 <td>Rahul</td>
@@ -85,28 +88,22 @@ button:hover{
 <td>Aman</td>
 <td>3200</td>
 </tr>
+
 </tbody>
 
 </table>
 
 </div>
 
+<br>
+
 <button onclick="downloadPDF()">Download PDF</button>
 
 <!-- Library -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
-<script>
-
-function downloadPDF(){
-
-const element = document.getElementById("tableArea");
-
-html2pdf().from(element).save("table-data.pdf");
-
-}
-
-</script>
+<!-- External JS -->
+<script src="pdf.js"></script>
 
 </body>
 </html>
