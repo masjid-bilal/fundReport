@@ -20,34 +20,48 @@ body{
     margin:auto;
 }
 
-/* header section */
+/* Header */
 .header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    margin-bottom:15px;
+    background:#2c3e50;
+    color:white;
+    padding:12px 20px;
+    border-radius:6px;
+    margin-bottom:20px;
 }
 
-/* button style */
-.download-btn{
+.header-title{
+    font-size:18px;
+    font-weight:500;
+}
+
+.header-buttons{
     display:flex;
-    align-items:center;
-    gap:8px;
+    gap:10px;
+}
+
+.btn{
     padding:8px 14px;
     border:none;
-    background:#e74c3c;
-    color:white;
-    font-size:14px;
+    border-radius:5px;
     cursor:pointer;
-    border-radius:6px;
+    font-size:14px;
 }
 
-.download-btn:hover{
-    background:#c0392b;
+.send-btn{
+    background:#27ae60;
+    color:white;
 }
 
-.download-btn i{
-    font-size:16px;
+.add-btn{
+    background:#3498db;
+    color:white;
+}
+
+.btn:hover{
+    opacity:0.9;
 }
 #tableArea{
 max-width:800px;
