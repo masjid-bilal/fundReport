@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <!-- Poppins Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
 <title>Masjid Bilal Fund</title>
 
@@ -150,8 +151,10 @@ Fund Management
 <tr>
 <th>Sr No.</th>
 <th>Name</th>
+<th>Description</th>
 <th>Payment Mode</th>
 <th>Amount INR</th>
+<th>Receipt Download</th>
 </tr>
 </thead>
 
@@ -159,239 +162,375 @@ Fund Management
 <tr>
 <td>1</td>
 <td>Saleem Bhai Tuk Tuk Wale</td>
+<td>Taraweeh Fund</td>
 <td>Cash</td>
 <td class="amount">500</td>
+<td>
+<button onclick="makeReceipt(this)">Receipt</button>
+</td>
 </tr>
 
 <tr>
 <td>2</td>
 <td>Qayyum Chacha Babu Dada</td>
+<td>Taraweeh Fund</td>
 <td>Cash</td>
 <td class="amount">500</td>
+<td>
+<button onclick="makeReceipt(this)">Receipt</button>
+</td>
+</td>
 </tr>
 
 <tr>
 <td>3</td>
 <td>Zulfikar Chacha S/o Abdul Sattaar</td>
+<td>Taraweeh Fund</td>
 <td>Cash</td>
 <td class="amount">500</td>
+<td>
+<button onclick="makeReceipt(this)">Receipt</button>
+</td>
 </tr>
 
 <tr>
 <td>4</td>
 <td>Ismail s/o Abdul Wahid</td>
+<td>Taraweeh Fund</td>
 <td>Cash</td>
 <td class="amount">500</td>
+<td>
+<button onclick="downloadReceipt(this)">PDF</button>
+</td>
 </tr>
 
 <tr>
 <td>5</td>
 <td>Choty Munne Padosi</td>
+<td>Taraweeh Fund</td>
 <td>Cash</td>
 <td class="amount">500</td>
+<td>
+<button onclick="downloadReceipt(this)">PDF</button>
+</td>
 </tr>
 
 <tr>
 <td>6</td>
 <td>Abdul Hannan Lala Baba</td>
+<td>Taraweeh Fund</td>
 <td>Cash</td>
 <td class="amount">500</td>
+<td>
+<button onclick="downloadReceipt(this)">PDF</button>
+</td>
 </tr>
 
 <tr>
 <td>7</td>
 <td>Wafa Ur Rehman Pappu Bhai</td>
+<td>Taraweeh Fund</td>
 <td>Cash</td>
 <td class="amount">500</td>
+<td>
+<button onclick="downloadReceipt(this)">PDF</button>
+</td>
 </tr>
 
 <tr>
 <td>8</td>
 <td>Mohd Shahid s/o Lala Baba</td>
+<td>Taraweeh Fund</td>
 <td>Cash</td>
 <td class="amount">500</td>
+<td>
+<button onclick="downloadReceipt(this)">PDF</button>
+</td>
 </tr>
 
 <tr>
 <td>9</td>
 <td>Akeel Ahmad Bangali Babu</td>
+<td>Taraweeh Fund</td>
 <td>Cash</td>
 <td class="amount">500</td>
+<td>
+<button onclick="downloadReceipt(this)">PDF</button>
+</td>
 </tr>
 
 <tr>
 <td>10</td>
 <td>Abdul hafeez s/o Hamid Dada Lala Baba</td>
+<td>Taraweeh Fund</td>
 <td>Cash</td>
 <td class="amount">500</td>
+<td>
+<button onclick="downloadReceipt(this)">PDF</button>
+</td>
 </tr>
 
 <tr>
 <td>11</td>
 <td>Iftikaar Ahmad s/o  Abdul Sattaar</td>
+<td>Taraweeh Fund</td>
 <td>Cash</td>
 <td class="amount">500</td>
+<td>
+<button onclick="downloadReceipt(this)">PDF</button>
+</td>
 </tr>
 
 <tr>
 <td>12</td>
 <td>Akib Bhai s/o Israeel Bhai</td>
+<td>Taraweeh Fund</td>
 <td>Cash</td>
 <td class="amount">500</td>
+<td>
+<button onclick="downloadReceipt(this)">PDF</button>
+</td>
 </tr>
 
 <tr>
 <td>13</td>
 <td>Mubeen Babu</td>
+<td>Taraweeh Fund</td>
 <td>Cash</td>
 <td class="amount">300</td>
+<td>
+<button onclick="downloadReceipt(this)">PDF</button>
+</td>
 </tr>
 
 <tr>
 <td>14</td>
 <td>Mohd Qasim s/o Abdul Lateef</td>
+<td>Taraweeh Fund</td>
 <td>Cash</td>
 <td class="amount">200</td>
+<td>
+<button onclick="downloadReceipt(this)">PDF</button>
+</td>
 </tr>
 
 <tr>
 <td>15</td>
 <td>Abdul Tabbab Masjid Padosi</td>
+<td>Taraweeh Fund</td>
 <td>Cash</td>
 <td class="amount">500</td>
+<td>
+<button onclick="downloadReceipt(this)">PDF</button>
+</td>
 </tr>
 
 <tr>
 <td>16</td>
 <td>Mohd Haseen s/o Mohd Haroon</td>
+<td>Taraweeh Fund</td>
 <td>Cash</td>
 <td class="amount">500</td>
+<td>
+<button onclick="downloadReceipt(this)">PDF</button>
+</td>
 </tr>
 
 <tr>
 <td>17</td>
 <td>Mohd Babu / Lala Baba</td>
+<td>Taraweeh Fund</td>
 <td>Cash</td>
 <td class="amount">500</td>
+<td>
+<button onclick="downloadReceipt(this)">PDF</button>
+</td>
 </tr>
 
 <tr>
 <td>18</td>
 <td>Qamar Bhai Chakki Wale</td>
+<td>Taraweeh Fund</td>
 <td>Cash</td>
 <td class="amount">1000</td>
+<td>
+<button onclick="downloadReceipt(this)">PDF</button>
+</td>
 </tr>
 
 <tr>
 <td>19</td>
 <td>Khaleeq Ahmad s/o Mohd Siddik </td>
+<td>Taraweeh Fund</td>
 <td>Cash</td>
 <td class="amount">500</td>
+<td>
+<button onclick="downloadReceipt(this)">PDF</button>
+</td>
 </tr>
 
 <tr>
 <td>20</td>
 <td>Mohd Yameen Sufiji</td>
+<td>Taraweeh Fund</td>
 <td>Cash</td>
 <td class="amount">500</td>
+<td>
+<button onclick="downloadReceipt(this)">PDF</button>
+</td>
 </tr>
 
 <tr>
 <td>21</td>
 <td>Mohd saif s/o Ateek Ahmad - Dukandaar</td>
+<td>Taraweeh Fund</td>
 <td>Cash</td>
 <td class="amount">500</td>
+<td>
+<button onclick="downloadReceipt(this)">PDF</button>
+</td>
 </tr>
 
 <tr>
 <td>22</td>
 <td>Abdul Mujeeb Light Wale</td>
+<td>Taraweeh Fund</td>
 <td>Cash</td>
 <td class="amount">500</td>
+<td>
+<button onclick="downloadReceipt(this)">PDF</button>
+</td>
 </tr>
 
 <tr>
 <td>23</td>
 <td>Saif Ur Rehman</td>
+<td>Taraweeh Fund</td>
 <td>Cash</td>
 <td class="amount">500</td>
+<td>
+<button onclick="downloadReceipt(this)">PDF</button>
+</td>
 </tr>
 
 <tr>
 <td>24</td>
 <td>Mohd Anas s/o Zulfikaar Ahmad</td>
+<td>Taraweeh Fund</td>
 <td>Online</td>
 <td class="amount">250</td>
+<td>
+<button onclick="downloadReceipt(this)">PDF</button>
+</td>
 </tr>
 
 <tr>
 <td>25</td>
 <td>Mohd Ovais s/o Abdul lateef</td>
+<td>Taraweeh Fund</td>
 <td>Online</td>
 <td class="amount">200</td>
+<td>
+<button onclick="downloadReceipt(this)">PDF</button>
+</td>
 </tr>
 
 <tr>
 <td>26</td>
 <td>Mohd Shahwaz</td>
+<td>Taraweeh Fund</td>
 <td>Online</td>
 <td class="amount">200</td>
+<td>
+<button onclick="downloadReceipt(this)">PDF</button>
+</td>
 </tr>
 
 <tr>
 <td>27</td>
 <td>Mohd Arish s/o Mohd Akir</td>
+<td>Taraweeh Fund</td>
 <td>Online</td>
 <td class="amount">1000</td>
+<td>
+<button onclick="downloadReceipt(this)">PDF</button>
+</td>
 </tr>
 
 <tr>
 <td>28</td>
 <td>Mohd Ehtisham s/o Shakeel Ahmad</td>
+<td>Taraweeh Fund</td>
 <td>Online</td>
 <td class="amount">500</td>
+<td>
+<button onclick="downloadReceipt(this)">PDF</button>
+</td>
 </tr>
 
 <tr>
 <td>29</td>
 <td>Mohd Sharif s/o Tufail Ahmad</td>
+<td>Taraweeh Fund</td>
 <td>Online</td>
 <td class="amount">500</td>
+<td>
+<button onclick="downloadReceipt(this)">PDF</button>
+</td>
 </tr>
 
 <tr>
 <td>30</td>
 <td>Abdul Aleem Ansari</td>
+<td>Taraweeh Fund</td>
 <td>Cash</td>
 <td class="amount">500</td>
+<td>
+<button onclick="downloadReceipt(this)">PDF</button>
+</td>
 </tr>
 
 <tr>
 <td>31</td>
 <td>Mohd Naseem s/o Mohd Shiddik</td>
+<td>Taraweeh Fund</td>
 <td>Cash</td>
 <td class="amount">500</td>
+<td>
+<button onclick="downloadReceipt(this)">PDF</button>
+</td>
 </tr>
 
 <tr>
 <td>32</td>
 <td>Nasir Malik</td>
+<td>Taraweeh Fund</td>
 <td>Cash</td>
 <td class="amount">500</td>
+<td>
+<button onclick="downloadReceipt(this)">PDF</button>
+</td>
 </tr>
 
 <tr>
 <td>33</td>
 <td>Mohd Nasir s/o Mohd Akir</td>
+<td>Taraweeh Fund</td>
 <td>Cash</td>
 <td class="amount">500</td>
+<td>
+<button onclick="downloadReceipt(this)">PDF</button>
+</td>
 </tr>
 </tbody>
 
 <tfoot>
 <tr class="total-row">
-<td colspan="3">Total</td>
+<td colspan="5">Total</td>
 <td id="totalAmount">0</td>
+<td>
+<button onclick="downloadReceipt(this)">PDF</button>
+</td>
 </tr>
 </tfoot>
 
