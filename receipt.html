@@ -59,13 +59,22 @@ table th, table td{
     display:flex;
     justify-content:space-between;
 }
-.sign{
-    width:120px;
-    display:block;
-    margin-bottom:5px;
+.auth-sign{
+    position:relative;
+    width:150px;
 }
 
+.auth-sign span{
+    display:block;
+    margin-top:40px;
+}
 
+.sign{
+    position:absolute;
+    top:-10px;
+    left:10px;
+    width:120px;
+}
 </style>
 </head>
 
@@ -121,8 +130,10 @@ Customer Signature
 </div>
 
 <div>
-<img src="sign.jpg" class="sign"><br>
-Authorized Signature
+<div class="auth-sign">
+<img src="images/sign.png" class="sign">
+<span>Authorized Signature</span>
+</div>
 </div>
 </div>
 
