@@ -17,6 +17,14 @@ body{
     background:#fff;
     padding:30px;
     border:1px solid #ddd;
+    position:relative;
+}
+
+.stamp{
+    position:absolute;
+    top:20px;
+    left:20px;
+    width:90px;
 }
 
 .header{
@@ -52,16 +60,14 @@ table th, table td{
     justify-content:space-between;
 }
 
-.signature img{
-    width:120px;
-}
-
 </style>
 </head>
 
 <body>
 
 <div class="container">
+
+<img src="images/stamp.jpg" class="stamp">
 
 <div class="header">
 <h2>Cash Receipt</h2>
@@ -104,16 +110,13 @@ Total: ₹5000
 </div>
 
 <div class="signature">
-
 <div>
 Customer Signature
 </div>
 
 <div>
-<img src="stamp.jpg"><br>
-Authorized Stamp
+Authorized Signature
 </div>
-
 </div>
 
 </div>
