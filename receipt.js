@@ -1,20 +1,20 @@
-function downloadReceipt(btn){
+function makeReceipt(btn){
 
 let row = btn.parentNode.parentNode;
 
-let name = row.cells[0].innerText;
-let desc = row.cells[1].innerText;
-let amount = row.cells[2].innerText;
+let sr = row.cells[0].innerText;
+let name = row.cells[1].innerText;
+let desc = row.cells[2].innerText;
 let mode = row.cells[3].innerText;
+let amount = row.cells[4].innerText;
 
-document.getElementById("r_name").innerText = name;
-document.getElementById("r_desc").innerText = desc;
-document.getElementById("r_amount").innerText = "₹"+amount;
-document.getElementById("r_mode").innerText = mode;
-document.getElementById("r_total").innerText = amount;
+let url = "receipt.html?"
++"sr="+encodeURIComponent(sr)
++"&name="+encodeURIComponent(name)
++"&desc="+encodeURIComponent(desc)
++"&mode="+encodeURIComponent(mode)
++"&amount="+encodeURIComponent(amount);
 
-let element = document.getElementById("container");
-
-html2pdf().from(element).save("receipt.pdf");
+window.open(url,"_blank");
 
 }
