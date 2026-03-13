@@ -82,6 +82,8 @@ table th, table td{
 </head>
 <script>
 
+document.addEventListener("DOMContentLoaded", function(){
+
 const params = new URLSearchParams(window.location.search);
 
 document.getElementById("r_num").innerText = params.get("sr");
@@ -93,6 +95,8 @@ document.getElementById("r_total").innerText = params.get("amount");
 
 let today = new Date().toLocaleDateString();
 document.getElementById("r_date").innerText = today;
+
+});
 
 </script>
 <body>
