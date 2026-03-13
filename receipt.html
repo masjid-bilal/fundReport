@@ -92,13 +92,13 @@ table th, table td{
 
 <div class="receipt-info">
 <div>
-<strong>Receipt No:</strong> 001 <br>
+<h3>Receipt No:<span id="r_num"</span></h3><br>
 <strong>Date:</strong> 13 March 2026
 </div>
 
 <div>
 <strong>Received From:</strong><br>
-Customer Name
+<h3>Customer Name:<span id="r_name"</span></h3>
 </div>
 </div>
 
@@ -110,19 +110,19 @@ Customer Name
 </tr>
 
 <tr>
-<td>Service Payment</td>
-<td>₹5000</td>
+<td id="r_desc"></td>
+<td id="r_amount"></td>
 </tr>
 
 <tr>
 <td><strong>Payment Mode</strong></td>
-<td>Cash</td>
+<td id="r_mode"></td>
 </tr>
 
 </table>
 
 <div class="total">
-Total: ₹5000
+<h3>Total: ₹<span id="r_amount"</span></h3>
 </div>
 
 <div class="signature">
