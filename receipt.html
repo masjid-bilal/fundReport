@@ -86,27 +86,29 @@ document.addEventListener("DOMContentLoaded", function(){
 
 const params = new URLSearchParams(window.location.search);
 
+let amount = params.get("amount");
+
 document.getElementById("r_num").innerText = params.get("sr");
 document.getElementById("r_name").innerText = params.get("name");
 document.getElementById("r_desc").innerText = params.get("desc");
-document.getElementById("r_amount").innerText = "₹"+params.get("amount");
 document.getElementById("r_mode").innerText = params.get("mode");
-document.getElementById("r_total").innerText = params.get("amount");
+
+document.getElementById("r_amount").innerText = "₹"+amount;
+document.getElementById("r_total").innerText = amount;
 
 let today = new Date().toLocaleDateString();
 document.getElementById("r_date").innerText = today;
 
-});
-
-let amount = params.get("amount");
-
-document.getElementById("r_total").innerText = amount;
+/* amount to words */
 
 let words = numberToWords(parseInt(amount));
 
-document.getElementById("amount_words").innerText = words + " Rupees Only";
-</script>
+document.getElementById("amount_words").innerText =
+words + " Rupees Only";
 
+});
+
+</script>
 <body>
 
 <div class="receipt">
@@ -125,7 +127,7 @@ document.getElementById("amount_words").innerText = words + " Rupees Only";
 
 <div>
 <strong>Received From:</strong><br>
-<span id="r_name"></span><br
+<span id="r_name"></span><br>
 </div>
 
 </div>
@@ -147,7 +149,7 @@ document.getElementById("amount_words").innerText = words + " Rupees Only";
 </table>
 
 <div class="amount-box">
-Total Amount: ₹<span id="r_amount"></span>
+Total Amount: ₹<span id="r_total"></span>
 </div>
 
 <div class="words">
