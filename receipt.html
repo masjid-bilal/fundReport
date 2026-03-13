@@ -80,7 +80,21 @@ table th, table td{
 
 </style>
 </head>
+<script>
 
+const params = new URLSearchParams(window.location.search);
+
+document.getElementById("r_num").innerText = params.get("sr");
+document.getElementById("r_name").innerText = params.get("name");
+document.getElementById("r_desc").innerText = params.get("desc");
+document.getElementById("r_amount").innerText = "₹"+params.get("amount");
+document.getElementById("r_mode").innerText = params.get("mode");
+document.getElementById("r_total").innerText = params.get("amount");
+
+let today = new Date().toLocaleDateString();
+document.getElementById("r_date").innerText = today;
+
+</script>
 <body>
 
 <div class="container">
