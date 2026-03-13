@@ -13,7 +13,7 @@ document.getElementById("r_amount").innerText = "₹"+amount;
 document.getElementById("r_mode").innerText = mode;
 document.getElementById("r_total").innerText = amount;
 
-let element = document.getElementById("receipt");
+let element = document.getElementById("container");
 
 html2pdf().from(element).save("receipt.pdf");
 
