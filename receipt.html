@@ -66,14 +66,17 @@ table th, table td{
 }
 
 .sign{
-    width:180px;
-    text-align:center;
+position:relative;
+text-align:center;
+width:200px;
 }
-
-.sign img{
-    width:150px;
-    filter:sepia(1) saturate(5) hue-rotate(200deg);
-    margin-top:-30px;   /* value badhaoge to sign aur niche jayega */
+.sign-img{
+position:absolute;
+top:-35px;   /* image text ke upar aayegi */
+left:50%;
+transform:translateX(-50%);
+width:150px;
+opacity:0.9;
 }
 .stamp{
     position:absolute;
