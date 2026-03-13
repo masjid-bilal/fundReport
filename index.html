@@ -112,6 +112,21 @@ th, td{
 max-width:100%;
 overflow-x:auto;
 }
+.receipt-btn{
+    background:#27ae60;
+    color:white;
+    border:none;
+    padding:7px 14px;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:14px;
+    transition:0.2s;
+}
+
+.receipt-btn:hover{
+    background:#1e874b;
+    transform:scale(1.05);
+}
 </style>
 
 </head>
@@ -166,7 +181,7 @@ Fund Management
 <td>Cash</td>
 <td class="amount">500</td>
 <td>
-<button onclick="makeReceipt(this)">Receipt</button>
+<button class="receipt-btn" onclick="makeReceipt(this)">Receipt</button>
 </td>
 </tr>
 
