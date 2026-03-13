@@ -59,6 +59,7 @@ table th, table td{
     display:flex;
     justify-content:space-between;
 }
+
 .auth-sign{
     position:relative;
     width:150px;
@@ -76,6 +77,7 @@ table th, table td{
     width:180px;
     filter:sepia(1) saturate(5) hue-rotate(180deg);
 }
+
 </style>
 </head>
 
@@ -92,13 +94,13 @@ table th, table td{
 
 <div class="receipt-info">
 <div>
-<h3>Receipt No:<span id="r_num"</span></h3><br>
-<strong>Date:</strong> 13 March 2026
+<h3>Receipt No: <span id="r_num"></span></h3>
+<strong>Date:</strong> <span id="r_date"></span>
 </div>
 
 <div>
 <strong>Received From:</strong><br>
-<h3>Customer Name:<span id="r_name"</span></h3>
+<h3>Customer Name: <span id="r_name"></span></h3>
 </div>
 </div>
 
@@ -122,20 +124,20 @@ table th, table td{
 </table>
 
 <div class="total">
-<h3>Total: ₹<span id="r_amount"</span></h3>
+<h3>Total: ₹<span id="r_total"></span></h3>
 </div>
 
 <div class="signature">
+
 <div>
 Customer Signature
 </div>
 
-<div>
 <div class="auth-sign">
 <img src="sign.jpg" class="sign">
 <span>Authorized Signature</span>
 </div>
-</div>
+
 </div>
 
 </div>
