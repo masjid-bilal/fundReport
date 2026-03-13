@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <title>Donation Receipt</title>
 
 <style>
@@ -120,7 +121,7 @@ words + " Rupees Only";
 
 </script>
 <body>
-
+<button class="download-btn" onclick="downloadPDF()">Download PDF</button>
 <div class="receipt">
 
 <div class="header">
@@ -183,4 +184,5 @@ Authorized Signature
 
 </body>
 <script src="amountWords.js"></script>
+<script src="pdf-receipt.js"></script>
 </html>
