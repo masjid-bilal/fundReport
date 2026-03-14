@@ -4,7 +4,7 @@ const element = document.querySelector(".receipt");
 
 const opt = {
   margin:10,
-  filename:'donation_receipt.pdf',
+  filename:'Fund_receipt.pdf',
   image:{ type:'jpeg', quality:1 },
   html2canvas:{ scale:3 },
   jsPDF:{ unit:'mm', format:'a4', orientation:'portrait' }
