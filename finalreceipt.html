@@ -2,126 +2,199 @@
 <html>
 <head>
 <meta charset="UTF-8">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-<title>Application Form</title>
+
+<title>Masjid Fund Receipt</title>
 
 <style>
 
 body{
-font-family: 'Poppins', sans-serif;
+font-family:'Poppins', sans-serif;
+background:#f5f6fa;
 }
 
 .form{
 width:800px;
-margin:auto;
-border:2px solid black;
-padding:20px;
+margin:40px auto;
+border:2px solid #000;
+padding:25px;
+background:white;
 }
 
-h2{
+.header{
 text-align:center;
+border-bottom:2px solid #000;
+padding-bottom:10px;
 margin-bottom:20px;
+}
+
+.header h2{
+margin:0;
+font-weight:600;
+letter-spacing:1px;
+}
+
+.header p{
+margin:3px 0;
+font-size:14px;
+}
+
+.header .link{
+font-style:italic;
+font-size:13px;
 }
 
 table{
 width:100%;
 border-collapse:collapse;
+font-size:14px;
 }
 
 td{
-border:1px solid black;
-padding:8px;
-height:35px;
+border:1px solid #000;
+padding:10px;
 }
 
 .label{
-width:30%;
-font-weight:bold;
+width:35%;
+font-weight:500;
+background:#f2f2f2;
 }
 
-.photo{
-width:120px;
-height:140px;
-text-align:center;
+.amount{
+font-weight:600;
+font-size:16px;
 }
 
-.print-btn{
-margin:20px;
-text-align:center;
-}
-
-@media print{
-.print-btn{
-display:none;
-}
-}
 .signature{
 display:flex;
 justify-content:space-between;
-margin-top:70px;
+margin-top:80px;
+text-align:center;
 }
+
+.signature div{
+width:200px;
+}
+
+.line{
+border-top:1px solid black;
+margin-top:40px;
+}
+
+.print-btn{
+text-align:center;
+margin-top:20px;
+}
+
+button{
+padding:10px 20px;
+font-family:'Poppins';
+border:none;
+background:#2c3e50;
+color:white;
+cursor:pointer;
+border-radius:4px;
+}
+
+button:hover{
+background:#1a252f;
+}
+
+@media print{
+
+body{
+background:white;
+}
+
+.print-btn{
+display:none;
+}
+
+.form{
+box-shadow:none;
+margin:0;
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
 
 <div class="form">
 
+<div class="header">
 <h2>MASJID BILAL FUND 2026 RECEIPT</h2>
-<p style="text-align:center; font-weight: 600;">Address: Mohalla Mela Ward No.3 Town Richha</p>
-<p style="text-align:center; font-style: italic;">Fund Details: https://masjid-bilal.github.io/fundReport/</p>
+<p><strong>Address:</strong> Mohalla Mela Ward No.3 Town Richha</p>
+<p class="link">Fund Details: https://masjid-bilal.github.io/fundReport/</p>
+</div>
 
 <table>
+
 <tr>
-<td class="label">Hand On Cash Date:</td>
+<td class="label">Hand On Cash Date</td>
 <td>19/03/2026</td>
 </tr>
 
 <tr>
-<td class="label">Masjid Name:</td>
+<td class="label">Masjid Name</td>
 <td>Masjid Bilal - Ahlehadees</td>
 </tr>
 
 <tr>
-<td class="label">Hafiz Name:</td>
+<td class="label">Hafiz Name</td>
 <td>Hafiz Zulfikaar Ahmad</td>
 </tr>
 
 <tr>
-<td class="label">Amount Mangement Head:</td>
+<td class="label">Amount Management Head</td>
 <td>Mohd Kamar</td>
 </tr>
 
 <tr>
-<td class="label">Amount Collector Name:</td>
+<td class="label">Amount Collector Name</td>
 <td>Mohd Asheer</td>
 </tr>
 
 <tr>
-<td class="label">Payment Mode:</td>
-<td colspan="2">Cash</td>
+<td class="label">Payment Mode</td>
+<td>Cash</td>
 </tr>
 
 <tr>
 <td class="label">Fund Type</td>
-<td colspan="2">Taraweeh Fund</td>
+<td>Taraweeh Fund</td>
 </tr>
 
 <tr>
-<td class="label">Final Amount:</td>
-<td colspan="2">Rs. 45,450/-</td>
+<td class="label amount">Final Amount</td>
+<td class="amount">Rs. 45,450 /-</td>
 </tr>
+
 </table>
 
 <div class="signature">
-<p>Fund Head Signature</p>
-<p>Authorized Signature</p>
+
+<div>
+<div class="line"></div>
+Fund Head Signature
+</div>
+
+<div>
+<div class="line"></div>
+Authorized Signature
+</div>
+
 </div>
 
 </div>
 
 <div class="print-btn">
-<button onclick="window.print()">Print Form</button>
+<button onclick="window.print()">Print Receipt</button>
 </div>
 
 </body>
