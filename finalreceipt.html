@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>Application Form</title>
+
+<style>
+
+body{
+font-family: 'Poppins', sans-serif;
+}
+
+.form{
+width:800px;
+margin:auto;
+border:2px solid black;
+padding:20px;
+}
+
+h2{
+text-align:center;
+margin-bottom:20px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+td{
+border:1px solid black;
+padding:8px;
+height:35px;
+}
+
+.label{
+width:30%;
+font-weight:bold;
+}
+
+.photo{
+width:120px;
+height:140px;
+text-align:center;
+}
+
+.print-btn{
+margin:20px;
+text-align:center;
+}
+
+@media print{
+.print-btn{
+display:none;
+}
+}
+.signature{
+display:flex;
+justify-content:space-between;
+margin-top:70px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="form">
+
+<h2>MASJID BILAL FUND 2026 RECEIPT</h2>
+<p style="text-align:center; font-weight: 600;">Address: Mohalla Mela Ward No.3 Town Richha</p>
+<p style="text-align:center; font-style: italic;">Fund Details: https://masjid-bilal.github.io/fundReport/</p>
+
+<table>
+<tr>
+<td class="label">Hand On Cash Date:</td>
+<td>19/03/2026</td>
+</tr>
+
+<tr>
+<td class="label">Masjid Name:</td>
+<td>Masjid Bilal - Ahlehadees</td>
+</tr>
+
+<tr>
+<td class="label">Hafiz Name:</td>
+<td>Hafiz Zulfikaar Ahmad</td>
+</tr>
+
+<tr>
+<td class="label">Amount Mangement Head:</td>
+<td>Mohd Kamar</td>
+</tr>
+
+<tr>
+<td class="label">Amount Collector Name:</td>
+<td>Mohd Asheer</td>
+</tr>
+
+<tr>
+<td class="label">Payment Mode:</td>
+<td colspan="2">Cash</td>
+</tr>
+
+<tr>
+<td class="label">Fund Type</td>
+<td colspan="2">Taraweeh Fund</td>
+</tr>
+
+<tr>
+<td class="label">Final Amount:</td>
+<td colspan="2">Rs. 45,450/-</td>
+</tr>
+</table>
+
+<div class="signature">
+<p>Fund Head Signature</p>
+<p>Authorized Signature</p>
+</div>
+
+</div>
+
+<div class="print-btn">
+<button onclick="window.print()">Print Form</button>
+</div>
+
+</body>
+</html>
