@@ -3,7 +3,7 @@ function downloadPDF(){
 const element = document.getElementById("tableArea");
 
 const opt = {
-margin:[40,20,20,20],
+margin:50px 40px;,
 filename:"masjid-bilal-fund.pdf",
 html2canvas:{scale:2},
 jsPDF:{
