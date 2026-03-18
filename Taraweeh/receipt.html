@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<title>Donation Receipt</title>
+
+<style>
+*{
+box-sizing:border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f6f9;
+}
+
+.receipt{
+width:700px;
+margin:40px auto;
+background:white;
+padding:30px;
+border:2px solid #333;
+position:relative;
+}
+
+.header{
+    text-align:center;
+    border-bottom:2px solid #333;
+    padding-bottom:10px;
+    margin-bottom:20px;
+}
+
+.header h2{
+    margin:0;
+}
+
+.info{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:20px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+}
+
+table th, table td{
+    border:1px solid #333;
+    padding:10px;
+}
+
+.amount-box{
+    margin-top:15px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.words{
+    margin-top:10px;
+    font-style:italic;
+}
+
+.footer{
+    margin-top:50px;
+    display:flex;
+    justify-content:space-between;
+}
+
+.sign{
+position:relative;
+text-align:center;
+width:200px;
+}
+.sign-img{
+position:absolute;
+top:-25px;
+left:50%;
+transform:translateX(-50%);
+width:150px !important;
+height:auto !important;
+filter:sepia(1) saturate(5) hue-rotate(200deg);
+}
+.stamp{
+    position:absolute;
+    top:18px;
+    left:20px;
+    width:100px;
+    opacity:0.8;
+}
+.download-btn{
+position:absolute;
+top:20px;
+right:20px;
+background:#e74c3c;
+color:white;
+border:none;
+padding:8px 14px;
+border-radius:5px;
+cursor:pointer;
+font-size:14px;
+}
+
+.download-btn:hover{
+background:#c0392b;
+}
+
+</style>
+
+</head>
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+const params = new URLSearchParams(window.location.search);
+
+let amount = params.get("amount");
+
+document.getElementById("r_num").innerText = params.get("sr");
+document.getElementById("r_name").innerText = params.get("name");
+document.getElementById("r_desc").innerText = params.get("desc");
+document.getElementById("r_mode").innerText = params.get("mode");
+
+document.getElementById("r_amount").innerText = "₹"+amount;
+document.getElementById("r_total").innerText = amount;
+
+let today = new Date().toLocaleDateString();
+document.getElementById("r_date").innerText = today;
+
+/* amount to words */
+
+let words = numberToWords(parseInt(amount));
+
+document.getElementById("amount_words").innerText =
+words + " Rupees Only";
+
+});
+
+</script>
+<body>
+
+<div class="receipt">
+<button class="download-btn" onclick="downloadPDF()">Download PDF</button>
+
+<div class="header">
+<h2>MASJID BILAL FUND</h2>
+<p>Address: Mohalla Mela Ward No.3 Town Richha</p>
+<p style="font-weight: bold;">Donation Receipt</p>
+</div>
+
+<div class="info">
+
+<div>
+<strong>Receipt No:</strong><span id="r_num"></span><br>
+<strong>Date:</strong><span id="r_date"></span><br>
+</div>
+
+<div>
+<strong>Received From:</strong><br>
+<span id="r_name"></span><br>
+</div>
+
+</div>
+
+<table>
+
+<tr>
+<th>Description</th>
+<th>Payment Mode</th>
+<th>Amount (INR)</th>
+</tr>
+
+<tr>
+<td id="r_desc"></td>
+<td id="r_mode">Cash</td>
+<td id="r_amount">₹</td>
+</tr>
+
+</table>
+
+<div class="amount-box">
+Total Amount: ₹<span id="r_total"></span>
+</div>
+
+<div class="words">
+Amount in Words:<span style="font-weight: bold;" id="amount_words"></span>
+</div>
+
+<div class="footer">
+
+<div>
+<img src="https://masjid-bilal.github.io/fundReport/stamp.jpg" class="stamp">
+</div>
+
+<div class="sign">
+<img src="https://masjid-bilal.github.io/fundReport/sign.jpg" class="sign-img"><br>
+Authorized Signature
+</div>
+
+</div>
+
+</div>
+
+</body>
+<script src="amountWords.js"></script>
+<script src="pdfreceipt.js"></script>
+</html>
