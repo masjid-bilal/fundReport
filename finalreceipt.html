@@ -7,6 +7,8 @@
 
 <title>Masjid Fund Receipt</title>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
 <style>
 
 body{
@@ -102,30 +104,13 @@ button:hover{
 background:#1a252f;
 }
 
-@media print{
-
-body{
-background:white;
-}
-
-.print-btn{
-display:none;
-}
-
-.form{
-box-shadow:none;
-margin:0;
-}
-
-}
-
 </style>
 
 </head>
 
 <body>
 
-<div class="form">
+<div class="form" id="receipt">
 
 <div class="header">
 <h2>MASJID BILAL FUND 2026 RECEIPT</h2>
@@ -194,8 +179,28 @@ Authorized Signature
 </div>
 
 <div class="print-btn">
-<button onclick="window.print()">Print Receipt</button>
+<button onclick="downloadPDF()">Download PDF</button>
 </div>
+
+<script>
+
+function downloadPDF(){
+
+const element = document.getElementById("receipt");
+
+const opt = {
+margin:[10,10,10,10],
+filename:'masjid-bilal-receipt.pdf',
+image:{ type:'jpeg', quality:1 },
+html2canvas:{ scale:2 },
+jsPDF:{ unit:'mm', format:'a4', orientation:'portrait' }
+};
+
+html2pdf().set(opt).from(element).save();
+
+}
+
+</script>
 
 </body>
 </html>
