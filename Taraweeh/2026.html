@@ -1,3 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- Poppins Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<title>Masjid Bilal Fund</title>
+
+<style>
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background:#f4f6f9;
+    padding:40px;
+}
+
+.container{
+    max-width:700px;
+    margin:auto;
+}
+table{
+width:100%;
+border-collapse:collapse;
+background:white;
+}   
+thead{
+    background:#2c3e50;
+    color:white;
+}
+
+th, td{
+    padding:12px;
+    border:1px solid #ddd;
+}
+.total-row{
+    background:#ffeaa7;
+    font-weight:600;
+    font-size:16px;
+}
+
+.total-row td{
+    border-top:3px solid #2c3e50;
+    color:#2c3e50;
+}
+/* Header */
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#2c3e50;
+    color:white;
+    padding:12px 20px;
+    border-radius:6px;
+    margin-bottom:20px;
+}
+
+.header-title{
+    font-size:18px;
+    font-weight:500;
+}
+
+.header-buttons{
+    display:flex;
+    gap:10px;
+}
+
+.btn{
+    padding:8px 14px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:14px;
+}
+
+.send-btn{
+    background:#27ae60;
+    color:white;
+}
+
+.add-btn{
+    background:#3498db;
+    color:white;
+}
+
+.btn:hover{
+    opacity:0.9;
+}
+/* button style */
+.download-btn{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 14px;
+    border:none;
+    background:#e74c3c;
+    color:white;
+    font-size:14px;
+    cursor:pointer;
+    border-radius:6px;
+}
+
+.download-btn:hover{
+    background:#c0392b;
+}
+
+.download-btn i{
+    font-size:16px;
+}
+#tableArea{
+max-width:100%;
+overflow-x:auto;
+}
+.receipt-btn{
+    background:#27ae60;
+    color:white;
+    border:none;
+    padding:7px 14px;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:14px;
+    transition:0.2s;
+}
+
+.receipt-btn:hover{
+    background:#1e874b;
+    transform:scale(1.05);
+}
+</style>
+
+</head>
+
+<body>
+
 <div class="container">
 
 <div class="header">
